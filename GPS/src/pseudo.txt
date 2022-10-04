@@ -1,0 +1,64 @@
+Prims Algorithm:
+    1. Create an empty set to keep track of nodes(the cities);
+
+    2. Assign "key" value to all nodes in the graph; (initially -1)
+        except "first" node, which you set to 0 to indicate that is the node we start with
+            first node can be any, its random.
+    *do step one and two once (no loop)
+
+    3. Loop(while mstSet does not include every node in graph)
+        //pick node "u" that
+            a. is not in the mstSet
+            b. has the lowest key value that is > -1 (cuz -1 means we haven't seen it yet)
+        for (node all nodes in the graph)
+            if(node is in mstSet(visited bool val))
+                continue to next node
+            if(node dist = -1)
+                continue;
+            if(lowest = -1)
+                lowest = node's distance;
+                lowest node = node;
+            else if (lowest > nodes distance)
+                lowest = node's distance
+                lowest node = node
+        add lowest node to mstSet;
+        for (adjacent nodes of lowest nodes)
+            if (A node is in mstSet)
+                continue;
+            if (A nodes distance = -1)
+                set A nodes distance = weight of edge to lowest node
+            else if (A nodes distance > edge weight)
+                A nodes distance = edge weight
+
+Dijkstras Algorithm:
+    1. Create an empty set(arraylist, linkedlist, hashset, etc) called sptSet
+    2. In graph, set all nodes distance attribute to infinity (-1)
+    set the source node to have distance value of 0
+    * do step 1 and 2 once (no loop)
+
+    3. loop(while) under condition that sptSet(sptSet doesnt include all nodes) does not include every node in the graph
+        a. pick node from graph that meets these conditions:
+            node is not in sptSet (havent seen it).
+            nodes distance > -1
+            node has smallest distance out of all other potential nodes.
+        int lowest distance = -1;
+        Node lowest node = null;
+        for(node in graph)
+            if('u' is in sptSet)
+                continue;
+            if('u' distance == -1)
+                continue;
+            if(lowest distance == -1)
+                lowest distance = 'u' distance;
+                lowest node = 'u';
+            else if(lowest distance > 'u' distance)
+                lowest distance = 'u' distance;
+                lowest node = 'u';
+        b. add lowest node to sptSet
+            (can set visited to true, depends on how you implement)
+        c. update distances of all adjacent nodes:
+            for(node a in lowest nodes adjacent nodes)
+                tempWeight = 'u' distance + edge of 'u' to a
+                if(tempWeight < a's distance value || a's distance == -1)
+                    a's distance value = tempWeight;
+                    a's path = 'u' path and add name of 'u' (for path) as new node in linkedlist as tail

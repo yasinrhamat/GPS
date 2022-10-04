@@ -1,0 +1,9 @@
+<Island>
+<name>Longer Island</name>
+<cities>
+["Smiley Town","Centereach High","Hicksville","Greak Neck","Lake City","Brain Carolina","Firmingville","Fire Island","Ultimatefort","KirkLand","Strong Neck","North Fork","South Beach"]
+</cities>
+<roads>
+["Centereach High,Smiley Town,12","Lake City,Smiley Town,30","Hicksville,Smiley Town,14","Lake City,Hicksville,16","Greak Neck,Centereach High,10","Firmingville,Lake City,17","Firmingville,Greak Neck,11","Brain Carolina,Hicksville,12","Brain Carolina,Lake City,8","Fire Island,Brain Carolina,13","KirkLand,Fire Island,7","KirkLand,Lake City,20","Ultimatefort,KirkLand,6","Ultimatefort,Firmingville,18","Strong Neck,Ultimatefort,6","Strong Neck,KirkLand,11","North Fork,Strong Neck,15","South Beach,Strong Neck,20"]
+</roads>
+</Island>
